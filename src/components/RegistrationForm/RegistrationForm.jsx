@@ -21,7 +21,7 @@ const initialValues = {
   const dispatch = useDispatch();
 
   const handleSubmit = (values, actions) => {
-    dispatch(register(values).unwrap().catch(() => {alert("Invalid email, please try again")}));
+    dispatch(register(values)).unwrap().catch(() => {alert("Invalid email, please try again")});
     actions.resetForm();
   };
 
